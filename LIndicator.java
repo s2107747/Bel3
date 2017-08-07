@@ -7,11 +7,17 @@ public class LIndicator extends Indicator {
 
 	@Override
 	public void display() throws InterruptedException {
-		System.out.print("\033[32m<-\r" + "\033[0m");
-		Thread.sleep(500);
+		String color;
+		int i;
+		for(i=0;i<10;i++)
+		{
+		color="\01["+i*3+"m";
+		System.out.print(color+"<-" + "\033[0m\r");
+		Thread.sleep(50);
+		}
 		System.out.print("             \r");
 		Thread.sleep(500);
-
+		
 	}
 
 }
