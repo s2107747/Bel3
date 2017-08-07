@@ -7,7 +7,7 @@ public class LIndicator extends Indicator {
 
 	@Override
 	public void display() throws InterruptedException {
-		System.out.print("\u001B[32m+<-\r");
+		System.out.print("\033[32m<-\r" + "\033[0m");
 		Thread.sleep(500);
 		System.out.print("             \r");
 		Thread.sleep(500);
